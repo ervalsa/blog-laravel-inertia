@@ -155,3 +155,7 @@
         }
     }
 }
+
+.prose :where(iframe):not(:where([class~='not-prose'] *)) {
+    @apply my-6 aspect-video h-auto w-full overflow-hidden rounded-lg focus:outline-none;
+}

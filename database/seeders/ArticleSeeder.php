@@ -35,5 +35,7 @@ class ArticleSeeder extends Seeder
                 'published_at' => now()
             ]
         ])->each(fn ($article) => Article::query()->create($article));
+
+        \App\Models\Article::factory()->count(30)->create();
     }
 }

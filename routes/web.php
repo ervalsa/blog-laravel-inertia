@@ -32,5 +32,6 @@ Route::middleware('auth')->group(function () {
 
 Route::resource('categories', CategoryController::class)->scoped(['category' => 'slug']);
 Route::resource('articles', ArticleController::class)->scoped(['article' => 'slug']);
+Route::get('articles/popular/{key}', [ArticleController::class, 'popular'])->name('articles.popular');
 
 require __DIR__.'/auth.php';

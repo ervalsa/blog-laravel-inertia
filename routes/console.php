@@ -17,7 +17,3 @@ use Illuminate\Support\Facades\Artisan;
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
-
-Artisan::command('migrate:fresh', function () {
-    $this->comment('You are not allowed to do this!');
-})->describe('Override default command');
